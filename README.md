@@ -305,6 +305,41 @@ using (var client = new HttpClient())
 2. **Monitoring**: Implement monitoring and logging mechanisms to track application performance and identify any issues promptly.
 3. **Scaling**: Consider scaling the application to handle increased workloads by distributing processing tasks across multiple instances or machines if necessary.
 
+## Adding the Program as a Windows Service
+
+1. **Compile the Program**:
+   First, compile the C# program into an executable file (`.exe`). You can use the C# compiler (`csc.exe`) provided by the .NET SDK. Navigate to the directory containing your program (`Program.cs`) and execute the following command:
+
+    ```bash
+    csc /out:FolderWatcherService.exe Program.cs
+    ```
+    This command compiles Program.cs into an executable named FolderWatcherService.exe.
+
+1. Install the Service:
+    Once you have the executable, you can install it as a Windows service using the sc (Service Control) command-line tool. Open a command prompt with administrator privileges and execute the following command:
+    ```bash
+    sc create FolderWatcherService binPath= "C:\path\to\FolderWatcherService.exe"
+    ```
+    Replace "C:\path\to\FolderWatcherService.exe" with the actual path to your compiled executable.
+
+2. Start the Service:
+    After installing the service, you can start it using the sc command as follows:
+    ```bash
+    sc start FolderWatcherService
+    ```
+    This command will start the FolderWatcherService Windows service.
+
+3. Verify the Service:
+    You can verify that the service has been installed and started by opening the Services Management Console. Press Win + R to open the Run dialog, type services.msc, and press Enter. Look for the FolderWatcherService in the list of services and ensure that its     status is Running.
+
+4. Optional: Uninstall the Service:
+    If you need to uninstall the service, you can use the sc delete command. Open a command prompt with administrator privileges and execute the following command:
+    ```bash
+    sc delete FolderWatcherService
+    ```
+    This command will remove the FolderWatcherService from the list of installed services.
+
+
 ## Contributing
 1. **Bug Reports and Feature Requests**: Submit bug reports or feature requests via GitHub Issues, providing detailed descriptions and, if applicable, proposed solutions.
 2. **Code Contributions**: Fork the repository, implement changes or new features, and submit pull requests for review. Follow coding standards and guidelines outlined in the project documentation.
