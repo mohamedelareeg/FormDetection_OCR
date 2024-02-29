@@ -347,4 +347,12 @@ using (var client = new HttpClient())
 ## License
 This project is licensed under the [MIT License](LICENSE). See the LICENSE file for details.
 
+### Third-Party Licenses
 
+### OpenCvSharp
+
+This project utilizes OpenCvSharp, which is licensed under the BSD 3-Clause License. For more information, see the [OpenCvSharp License](https://github.com/shimat/opencvsharp/blob/master/LICENSE).
+
+### Tesseract OCR
+
+This project utilizes Tesseract OCR, which is licensed under the Apache License 2.0. For more information, see the [Tesseract OCR License](https://github.com/tesseract-ocr/tesseract/blob/master/COPYING).
