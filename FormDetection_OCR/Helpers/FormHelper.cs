@@ -1,6 +1,7 @@
 ﻿
 using Components.Helpers;
 using FormDetection_OCR.Constants;
+using FormDetection_OCR.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OpenCvSharp;
@@ -122,8 +123,6 @@ namespace FormDetection_OCR.ImgHelper
      
         private static Bitmap PreprocessImage(Bitmap image)
         {
-            // Apply image enhancement or noise reduction techniques to improve image quality
-            // Example: perform histogram equalization
             Bitmap processedImage = ImageProcessingHelper.HistogramEqualization(image);
 
             return processedImage;
@@ -352,37 +351,6 @@ namespace FormDetection_OCR.ImgHelper
             }
         }
 
-        public class Zone
-        {
-            public double X { get; set; }
-            public double Y { get; set; }
-            public double Width { get; set; }
-            public double Height { get; set; }
-            public double ActualWidth { get; set; }
-            public double ActualHeight { get; set; }
-            public string ImageFileName { get; set; }
-            public string Name { get; set; }
-            public string IndexingField { get; set; }
-            public string Regex { get; set; }
-
-            public string Type { get; set; }
-            public string WhiteList { get; set; }
-
-            public bool IsDuplicated { get; set; } = false;
-        }
-        public class Form
-        {
-            public int Count { get; set; }
-            public bool IsDuplicated { get; set; } = false;
-            public List<TemplateImage> TemplateImages { get; set; }
-        }
-
-        public class TemplateImage
-        {
-            public int Index { get; set; }
-            public string ImageFileName { get; set; }
-            public List<Zone> SerializableRect { get; set; }
-
-        }
+     
     }
 }

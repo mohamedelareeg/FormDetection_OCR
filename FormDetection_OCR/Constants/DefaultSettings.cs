@@ -48,13 +48,13 @@ namespace FormDetection_OCR.Constants
         {
         }
        
-        public string WatcherPath = "\\\\10.10.10.190\\kodak";
+        public string WatcherPath = "C:\\WatchedFolder";
         public double FormSimilarity = 5;
-        public string apiUrl = "http://10.10.10.60:771/api/EClaims/PostClaim";
+        public string apiUrl = "apiURL";
         public bool EnableFTP = false;
-        public string FTPServerURL = "ftp://ftp-michael-george.alwaysdata.net/";
-        public string FTPUserName = "michael-george";
-        public string FTPPassword = "P@ssw0rd123$%^";
+        public string FTPServerURL = "ftp://sample/";
+        public string FTPUserName = "username";
+        public string FTPPassword = "password";
         public string FTPWatchedDirectory = "\\Papers\\";
         public string FTPTempDirectory = "\\Temp\\";
     }
