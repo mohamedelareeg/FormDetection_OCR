@@ -355,4 +355,4 @@ This project utilizes OpenCvSharp, which is licensed under the BSD 3-Clause Lice
 
 ### Tesseract OCR
 
-This project utilizes Tesseract OCR, which is licensed under the Apache License 2.0. For more information, see the [Tesseract OCR License](https://github.com/tesseract-ocr/tesseract/blob/master/COPYING).
+This project utilizes Tesseract OCR, which is licensed under the Apache License 2.0. For more information, see the [Tesseract OCR License](https://github.com/tesseract-ocr/tesseract?tab=Apache-2.0-1-ov-file#readme).
